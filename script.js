@@ -1,6 +1,8 @@
+let d=true;
 let a=Math.floor(Math.random()*3);
 let b="";
-let d=true;
+
+while(d){
 if(a==0){
   b="R"
 }
@@ -11,7 +13,6 @@ else{
   b="S"
 }
 
-while(d){
 let c=prompt("Choose R for rock , P for paper or S for scissor")
   alert("Opponent Chose " + (b=="R"?"Rock":(b=="P"?"Paper":"Scissor")));
 
@@ -24,7 +25,8 @@ else if((c=="R"&b=="P")||(c=="P"&b=="S")||(c=="S"&b=="R")){
   break;
 }
 else{
-  d= confirm("Dou you want to Continue ? ")
+  a=Math.floor(Math.random()*3);
+  d= confirm("You Drew. Do you want to Continue ? ")
 }
 }
 
